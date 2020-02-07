@@ -1,0 +1,30 @@
+{
+  "name": "vuex-state-hash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --watch --colors --config ./webpack.config.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "prettier": "^1.19.1",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
