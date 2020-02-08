@@ -25,6 +25,8 @@ new Vue({
         if (currentCategory.length > 0) {
           this.$store.dispatch('setCurrentCategory', currentCategory);
         }
+      } else if (category === '' || category === void 0) {
+        this.$store.dispatch('setCurrentCategory', []);
       }
     });
 
@@ -34,6 +36,9 @@ new Vue({
     this.$store.subscribe(({ type }) => {
       if (type === 'setCurrentCategory') {
         const { category } = parseLocationHash();
+
+        // stateに変更がなければ無視
+        if (category === String(this.currentCategory)) return;
 
         if (category) {
           window.location.hash = window.location.hash.replace(`category=${category}`, `category=${String(this.currentCategory)}`);
